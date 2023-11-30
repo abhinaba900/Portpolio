@@ -1,7 +1,7 @@
 import logo from "../image/logoImage.png";
 import { Link } from "react-scroll";
 import { Box, Image } from "@chakra-ui/react";
-import resume from "../resume/resume.pdf";
+import Resume from "../resume/resume.pdf";
 import "./Navbar.css";
 import Introd from "./intro/Intro";
 import About from "./about/About";
@@ -104,11 +104,9 @@ function Navbar() {
               Contact
             </Link>
           </Box>
-          <Link className="desktopMenuListItem resume">
-            <a download={true} href={resume}>
-              Resume
-            </a>
-          </Link>
+          <Text as="a" href={Resume} download={true} className="desktopMenuListItem resume">
+            Resume
+          </Text>
         </Box>
       ) : (
         <NavbarTwo />
