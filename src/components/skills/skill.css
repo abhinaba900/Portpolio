@@ -1,0 +1,91 @@
+.skill {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.skill h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.horizontal-scroller-container {
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 70%;
+  display: grid;
+  place-items: center;
+  perspective: 100px;
+  overflow: hidden;
+  background: transparent;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.container {
+  display: flex;
+  width: calc(250px * 18);
+  white-space: nowrap;
+  animation: scroll 40s linear infinite both;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 9));
+  }
+}
+
+.first-slide {
+  height: 200px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  position: relative;
+  will-change: transform;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 40%;
+  margin: 10px;
+}
+
+.first-slide img {
+  width: 30%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.horizontal-scroller-container:hover .container {
+  animation-play-state: paused;
+}
+
+.first-slide:hover {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}
+
+.first-slide img:hover {
+  transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .horizontal-scroller-container {
+    width: 90%;
+  }
+
+  .first-slide {
+    width: 200px;
+    height: 150px;
+  }
+
+  .first-slide img {
+    width: 40%;
+  }
+}
