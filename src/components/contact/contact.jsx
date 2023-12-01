@@ -67,63 +67,71 @@ function Contact() {
   };
 
   return (
-    <Box
-      marginTop={{ base: 16, md: 24, lg: 32, xl: 60 }}
-      _hover={{
-        boxShadow: "2xl",
-        transform: "scale(1.1)",
-        transition: "all 0.5s ease",
-        cursor: "pointer",
-      }}
-      borderRadius={{ base: "none", md: "xl" }}
-      mb={{ base: 16, md: 24 }}
-      mt={{ base: 16, md: 24 }}
-      className="contact"
-      boxShadow={{ base: "none", md: "xl" }}
-      mx="auto"
-      w={{ base: "90%", md: "40%" }}
-      p={useBreakpointValue({ base: 4, md: 8 })}
-    >
-      <Box mb={4} mx="auto" textAlign="center">
-        <Heading>Get in touch</Heading>
+    <Box>
+      <Box
+        marginTop={{ base: 16, md: 24, lg: 32, xl: 60 }}
+        _hover={{
+          boxShadow: "2xl",
+          transform: "scale(1.1)",
+          transition: "all 0.5s ease",
+          cursor: "pointer",
+        }}
+        borderRadius={{ base: "none", md: "xl" }}
+        mb={{ base: 16, md: 24 }}
+        mt={{ base: 16, md: 24 }}
+        className="contact"
+        boxShadow={{ base: "none", md: "xl" }}
+        mx="auto"
+        w={{ base: "90%", md: "40%" }}
+        p={useBreakpointValue({ base: 4, md: 8 })}
+      >
+        <Box mb={4} mx="auto" textAlign="center">
+          <Heading>Get in touch</Heading>
+          <Box>
+            <p>
+              I'd love to hear from you. Please fill out the form below and I
+              will get back to you as soon as possible.
+            </p>
+          </Box>
+        </Box>
+        <Stack as={"form"} spacing={4} onSubmit={handleSubmit}>
+          <FormControl id="name">
+            <FormLabel>Name</FormLabel>
+            <Input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </FormControl>
+          <FormControl id="email">
+            <FormLabel>Email address</FormLabel>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormControl>
+          <FormControl id="message">
+            <FormLabel>Message</FormLabel>
+            <Input
+              type="text"
+              name="message"
+              placeholder="Message"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            />
+          </FormControl>
+          <Button colorScheme="blue" type="submit">
+            Submit
+          </Button>
+        </Stack>
       </Box>
-      <Stack as={"form"} spacing={4} onSubmit={handleSubmit}>
-        <FormControl id="name">
-          <FormLabel>Name</FormLabel>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="email">
-          <FormLabel>Email address</FormLabel>
-          <Input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </FormControl>
-        <FormControl id="message">
-          <FormLabel>Message</FormLabel>
-          <Input
-            type="text"
-            name="message"
-            placeholder="Message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </FormControl>
-        <Button colorScheme="blue" type="submit">
-          Submit
-        </Button>
-      </Stack>
     </Box>
   );
 }

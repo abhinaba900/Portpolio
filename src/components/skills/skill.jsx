@@ -6,55 +6,43 @@ import Nodejs from "./image/nodejs.png";
 import Reactjs from "./image/react.png";
 import github from "./image/github.png";
 import "./skill.css";
+import { Box, Text, Image, Heading } from "@chakra-ui/react";
 
 function Skill() {
+  const imageGroups = [Js, Html, Css, Nodejs, Reactjs];
+  const textGroups=["Javascript", "HTML", "CSS", "Nodejs", "Reactjs"];
   return (
-    <>
-
-       <div className="skill">
-        <h1>Skills</h1>
-       </div>
-      <div className="horizontal-scroller-container">
-        <main class="container">
-          <p class="first-slide">
-            <img width={50} src={Js} alt="js logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Html} alt="html logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Css} alt="Css logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Nodejs} alt="node logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Reactjs} alt="react logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={github} alt="github logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Js} alt="js logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Html} alt="html logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Css} alt="Css logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Nodejs} alt="node logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={Reactjs} alt="react logo" />
-          </p>
-          <p class="first-slide">
-            <img width={50} src={github} alt="github logo" />
-          </p>
+    <Box as="div" className="appContainer">
+      <Box as="div" className="wrapper">
+        <Box className="skill">
+          <Heading as="h1" size="2xl">
+            Skills
+          </Heading>
+        </Box>
+        <main className="marquee">
+          <Box className="marqueeGroup">
+            {imageGroups.map((image, index) => (
+              <Box className="imageGroup">
+                <Image key={index} src={image} alt="js logo" />
+                <Text key={index} as={"p"}>
+                  {textGroups[index]}
+                </Text>
+              </Box>
+            ))}
+          </Box>
+          <Box className="marqueeGroup">
+            {imageGroups.map((image, index) => (
+              <Box className="imageGroup">
+                <Image key={index} src={image} alt="js logo" />
+                <Text key={index} as={"p"}>
+                  {textGroups[index]}
+                </Text>
+              </Box>
+            ))}
+          </Box>
         </main>
-      </div>
-    </>
+      </Box>
+    </Box>
   );
 }
 

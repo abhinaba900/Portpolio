@@ -1,91 +1,61 @@
-.skill {
-  text-align: center;
-  margin-bottom: 5rem;
-}
-
-.skill h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
-.horizontal-scroller-container {
-  height: 250px;
-  margin: auto;
+.appContainer {
+  width: 100vw;
+  height: 100vh;
+  color: #000000;
   position: relative;
-  width: 70%;
-  display: grid;
-  place-items: center;
-  perspective: 100px;
-  overflow: hidden;
-  background: transparent;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-
-.container {
   display: flex;
-  width: calc(250px * 18);
-  white-space: nowrap;
-  animation: scroll 40s linear infinite both;
-  white-space: nowrap;
-  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
 }
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 9));
-  }
-}
-
-.first-slide {
-  height: 200px;
-  width: 250px;
+.wrapper {
+  width: 100%;
+  height: fit-content;
   display: flex;
   align-items: center;
-  padding: 15px;
-  position: relative;
-  will-change: transform;
-  transition: transform 0.3s ease;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 40%;
-  margin: 10px;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.first-slide img {
-  width: 30%;
+.marquee {
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  user-select: none;
+}
+@keyframes marquee {
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marqueeGroup {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+  width: 100%;
+  gap: 2%;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.imageGroup {
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 40vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 30vmin, 30rem) / 10);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.imageGroup > img {
   object-fit: contain;
-  transition: transform 0.3s ease;
-  display: block;
-  margin: 0 auto;
-}
-
-.horizontal-scroller-container:hover .container {
-  animation-play-state: paused;
-}
-
-.first-slide:hover {
-  animation-play-state: paused;
-  transform: scale(1.1);
-}
-
-.first-slide img:hover {
-  transform: rotate(360deg);
-}
-
-@media screen and (max-width: 768px) {
-  .horizontal-scroller-container {
-    width: 90%;
-  }
-
-  .first-slide {
-    width: 200px;
-    height: 150px;
-  }
-
-  .first-slide img {
-    width: 40%;
-  }
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+  padding: 5px 20px;
+  margin-left: 1rem;
 }
