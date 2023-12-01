@@ -32,9 +32,9 @@ function Navbar() {
   }, []);
 
   return (
-    <motion.Box className="App-header">
+    <Box className="App-header">
       {!isMobile ? (
-        <Box as="nav" className="navbar">
+        <Box as="nav" backgroundColor={"teal.600"} p={4} className="navbar">
           <Image className="logo" src={logo} alt=" logo" />
           <Box className="decstopmenu">
             <Link
@@ -104,7 +104,12 @@ function Navbar() {
               Contact
             </Link>
           </Box>
-          <Text as="a" href={Resume} download={true} className="desktopMenuListItem resume">
+          <Text
+            as="a"
+            href={Resume}
+            download={true}
+            className="desktopMenuListItem resume"
+          >
             Resume
           </Text>
         </Box>
@@ -130,7 +135,7 @@ function Navbar() {
       >
         <Text> © 2023 Abhinaba. All rights reserved </Text>
       </footer>
-    </motion.Box>
+    </Box>
   );
 }
 
