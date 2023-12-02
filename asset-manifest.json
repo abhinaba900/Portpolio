@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Portpolio/static/css/main.37af61b2.css",
+    "main.js": "/Portpolio/static/js/main.b79f3662.js",
+    "static/js/787.540d48a6.chunk.js": "/Portpolio/static/js/787.540d48a6.chunk.js",
+    "static/media/image1.png": "/Portpolio/static/media/image1.a1f9dc87ebf04f1beff9.png",
+    "static/media/airtable1.png": "/Portpolio/static/media/airtable1.3eab62b1b01e0842fa0e.png",
+    "static/media/image3.png": "/Portpolio/static/media/image3.f806bc3c8373a68f0103.png",
+    "static/media/airtable2.png": "/Portpolio/static/media/airtable2.1f3addefa30a5f7990f5.png",
+    "static/media/resume.pdf": "/Portpolio/static/media/resume.e9b9fe2141e276384fa0.pdf",
+    "static/media/profile.png": "/Portpolio/static/media/profile.a7b67425e70d9a24a470.png",
+    "static/media/react.png": "/Portpolio/static/media/react.35639ed930462bfcd544.png",
+    "static/media/nodejs.png": "/Portpolio/static/media/nodejs.007e99f68b718e476aba.png",
+    "static/media/logoImage.png": "/Portpolio/static/media/logoImage.b2edf33487a998c93bfa.png",
+    "static/media/css.png": "/Portpolio/static/media/css.02d225c7df0b28341d8d.png",
+    "static/media/github.png": "/Portpolio/static/media/github.05f6c17b8cd04c28456f.png",
+    "static/media/html-5.png": "/Portpolio/static/media/html-5.cfb2ba4a6b1c3de295bc.png",
+    "static/media/js.png": "/Portpolio/static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "/Portpolio/index.html",
+    "main.37af61b2.css.map": "/Portpolio/static/css/main.37af61b2.css.map",
+    "main.b79f3662.js.map": "/Portpolio/static/js/main.b79f3662.js.map",
+    "787.540d48a6.chunk.js.map": "/Portpolio/static/js/787.540d48a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37af61b2.css",
+    "static/js/main.b79f3662.js"
+  ]
+}
